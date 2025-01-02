@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+  color: #333;
+}
+
+.container {
+  max-width: 50%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+}
