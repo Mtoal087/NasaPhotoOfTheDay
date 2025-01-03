@@ -13,9 +13,3 @@
 img {
   transition: all ease 0.5s;
 }
-
-img:hover {
-  height: 80vh;
-  width: auto;
-  margin-top: 20px;
-}

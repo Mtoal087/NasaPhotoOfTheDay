@@ -1,141 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/static/NASA_Worm_logo.svg.png">
-    <link rel="stylesheet" href="/static/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/static/NASA_Worm_logo.svg.png" />
+    <link rel="stylesheet" href="/static/style.css" />
     <title>NASA Photo of the Day</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Include tsParticles CDN -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.34.0"></script>
-</head>
+  </head>
 
-<body class="bg-[#232741] p-6 text-white">
+  <body class="bg-[#232741] p-6 text-white">
     <!-- tsParticles Container -->
     <div id="tsparticles"></div>
-    
+
     <!-- Content Container -->
     <div class="flex flex-col items-center relative z-10">
-        <h1 class="text-4xl my-10 text-center">{{.Title}}</h1>
-        <p class="mb-2 self-start text-xl md:self-center">{{.Date}}</p>
-        <p class="mb-2 self-start text-xl md:self-center">{{.Copyright}}</p>
-        <img src="{{.Hdurl}}" alt="{{.Title}}" class="md:h-96 rounded-xl drop-shadow-lg mb-10">
-        <p class="md:w-[60%] text-lg rounded-lg bg-indigo-950 p-6 md:p-10 opacity-80">{{.Explanation}}</p>
+      <h1 class="text-4xl my-10 text-center">{{.Title}}</h1>
+      <p class="mb-2 self-start text-xl md:self-center">{{.Date}}</p>
+      <p class="mb-10 self-start text-xl md:self-center">{{.Copyright}}</p>
+      <img
+        src="{{.Hdurl}}"
+        alt="{{.Title}}"
+        class="md:w-[50%] rounded-xl drop-shadow-lg mb-10"
+      />
+      <p
+        class="md:w-[60%] text-lg rounded-lg bg-indigo-950 p-6 md:p-10 opacity-70 drop-shadow-lg mb-10"
+      >
+        {{.Explanation}}
+      </p>
+
+      <p class="self-center md:self-end mb-10">
+        Website created by Matthew Toal
+      </p>
     </div>
 
     <!-- Initialize tsParticles with preset -->
     <script>
-        tsParticles.load("tsparticles", {
-            "particles": {
-                "number": {
-                    "value": 160,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    },
-                    "image": {
-                        "src": "img/github.svg",
-                        "width": 100,
-                        "height": 100
-                    }
-                },
-                "opacity": {
-                    "value": 1,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 4,
-                        "size_min": 0.3,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": false,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 1,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 600
-                    }
-                }
+      tsParticles.load("tsparticles", {
+        particles: {
+          number: {
+            value: 160,
+            density: {
+              enable: true,
+              value_area: 800,
             },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "bubble"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 250,
-                        "size": 0,
-                        "duration": 2,
-                        "opacity": 0,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 400,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
             },
-            "retina_detect": true
-        });
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 1,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 4,
+              size_min: 0.3,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 600,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "bubble",
+            },
+            onclick: {
+              enable: true,
+              mode: "repulse",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 250,
+              size: 0,
+              duration: 2,
+              opacity: 0,
+              speed: 3,
+            },
+            repulse: {
+              distance: 400,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
     </script>
-</body>
+  </body>
 </html>
+

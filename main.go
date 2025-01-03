@@ -53,6 +53,8 @@ func fetchNasaPhoto(apiKey string) (NasaPhoto, error) {
 		fmt.Printf("Problem reformatting date")
 	}
 
+  // fmt.Printf(photo.Explanation)
+
 	return photo, nil
 }
 
